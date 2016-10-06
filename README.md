@@ -17,3 +17,8 @@ Include bash profile things in `~/.profile`:
 source ~/src/dotfiles-redux/.sdubs_profile
 source ~/src/dotfiles-redux/.better_profile
 ```
+
+# TODO
+
+- Write a script to do the above automatically.
+- Figure out autocompletion
