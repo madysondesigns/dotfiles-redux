@@ -1,0 +1,45 @@
+[user]
+    name = Sarah Whinnem
+    email = sarah@betterment.com
+
+[hub]
+	protocol = https
+	user = swhinnem
+
+[core]
+    quotepath = false
+    whitespace = cr-at-eol
+	editor = subl -w
+
+[alias]
+    push = "!git push || $(git push 2>&1 | tail -n2 | head -n1)"
+    pull = pull --ff-only
+    st = status
+    ci = commit -v
+    co = checkout
+    df = "diff ..@{u}"
+    di = diff -w
+    dc = diff --cached
+    r = !git l -20
+    l = "!. ~/.githelpers && pretty_git_log"
+    la = !git l --all
+    ra = !git r --all
+    mad = add *
+    aa = add --all .
+    rmd = add -u
+    amend = commit --amend
+    comp = !git l --no-merges
+    mall = "!git up && git co stage && git merge master && git push origin stage && git co develop && git merge stage && git push origin develop"
+
+[color]
+    ui = true
+
+[push]
+    default = simple
+
+[gist]
+    browse = true
+    private = true
+
+[help]
+    autocorrect = 1
