@@ -1,4 +1,4 @@
-# All the config I will probably never need. 
+# All the config I will probably never need.
 
 # path crap
 [[ -d $HOME/.bin ]] && export PATH=$HOME/.bin:$PATH
@@ -8,6 +8,9 @@ export EDITNOW='subl'
 export EDITOR='subl -w'
 export LESS="$LESS -i -F -R -X"
 
+# git auto-complete
+source /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
+source /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh
 
 # handy aliases
 alias ls="/bin/ls -F"
@@ -34,12 +37,11 @@ shopt -s checkwinsize
 
 # improved history
 export HISTIGNORE="[   ]*:&:bg:fg:exit"
-export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
-export HISTSIZE=100000                   # big big history
-export HISTFILESIZE=100000               # big big history
-shopt -s histappend                      # append to history, don't overwrite it
-# Save and reload the history after each command finishes
-export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+export HISTCONTROL=ignoredups:erasedups                                         # no duplicate entries
+export HISTSIZE=100000                                                          # big big history
+export HISTFILESIZE=100000                                                      # big big history
+shopt -s histappend                                                             # append to history, don't overwrite it
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"     # Save and reload the history after each command finishes
 
 
 # color & prompt stuff
