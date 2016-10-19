@@ -24,6 +24,7 @@
     l = "!. ~/.githelpers && pretty_git_log"
     la = !git l --all
     ra = !git r --all
+    ass = add
     mad = add *
     aa = add --all .
     rmd = add -u
