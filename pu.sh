@@ -5,7 +5,7 @@
 dots="$PWD"
 old_dots=~/.old_dots             # old dotfiles backup directory
 master_dot=~/.profile
-files=".githelpers"         # list of files/folders to symlink in homedir
+files=".githelpers .bash_prompt"         # list of files/folders to symlink in homedir
 
 ########## Link dotfiles that need to be in ~
 
