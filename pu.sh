@@ -54,6 +54,7 @@ fi
 # Add dotfiles .gitconfig to ~/.gitconfig
 echo "Linking custom gitconfig..."
 git config --global include.path "$dots/.gitconfig"
+git config --global core.excludesfile "$dots/.gitignore_global"
 
 
 ########## Re-source main .profile
