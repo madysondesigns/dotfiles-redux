@@ -101,7 +101,7 @@ Username="\u"
 
 
 # PS1="$LIGHT_GRAY$*$WHITE$GREEN \$(parse_git_branch)$LIGHT_GRAY\$ "
-PS1="\[$BRed\]> "
+PS1="\[$Red\]§ "
 PS1+="\[$IBlack\]$Time12a"
 PS1+="\[$White\] $Hostname "
 PS1+="\[$BWhite\]$PathShort/"
