@@ -1,5 +1,7 @@
 # Config specific to Betterment
 
+source ~/.local/.secrets
+
 # Settings for Betterment Webapp build
 
 # aliases
