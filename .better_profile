@@ -1,6 +1,6 @@
 # Config specific to Betterment
 
-source ~/.local/.secrets
+source $HOME/.local/.secrets
 
 # Settings for Betterment Webapp build
 

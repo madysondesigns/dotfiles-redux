@@ -45,7 +45,7 @@ export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"     
 
 
 # color & prompt stuff
-source ~/.bash_prompt
+source $HOME/.bash_prompt
 export TERM=xterm-color
 export CLICOLOR=1
 

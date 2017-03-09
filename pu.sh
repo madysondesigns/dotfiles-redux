@@ -59,5 +59,5 @@ git config --global core.excludesfile "$dots/.gitignore_global"
 
 ########## Re-source main .profile
 echo "Re-sourcing $master_dot..."
-source ~/.profile
+source $HOME/.profile
 # source ~/.vimrc
