@@ -3,8 +3,8 @@
 ########## Variables
 
 dots="$PWD"
-old_dots=~/.old_dots             # old dotfiles backup directory
-master_dot=~/.profile
+old_dots=$HOME/.old_dots             # old dotfiles backup directory
+master_dot=$HOME/.profile
 files=".githelpers .bash_prompt"         # list of files/folders to symlink in homedir
 
 ########## Link dotfiles that need to be in ~
@@ -59,5 +59,5 @@ git config --global core.excludesfile "$dots/.gitignore_global"
 
 ########## Re-source main .profile
 echo "Re-sourcing $master_dot..."
-source $HOME/.profile
+exec $SHELL -l
 # source ~/.vimrc

@@ -9,8 +9,16 @@ export EDITOR='subl -w'
 export LESS="$LESS -i -F -R -X"
 
 # git auto-complete
-source /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
-source /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh
+if which brew &> /dev/null; then
+    if [ -f $(brew --prefix)/etc/bash_completion ]; then
+        source $(brew --prefix)/etc/bash_completion.d/git-completion.bash
+        source $(brew --prefix)/etc/bash_completion.d/git-prompt.sh
+    else
+        echo "Git completion & prompt not installed."
+    fi
+else
+    echo "Homebrew not installed. Install it from https://brew.sh/."
+fi
 
 # handy aliases
 alias ls="/bin/ls -F"
