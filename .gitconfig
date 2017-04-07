@@ -28,15 +28,26 @@
     mad = add *
     aa = add --all .
     rmd = add -u
-    amend = commit --amend
+    edit = commit --amend
     comp = !git l --no-merges
     mall = "!git up && git co stage && git merge master && git push origin stage && git co develop && git merge stage && git push origin develop"
+
+    undo = reset --soft HEAD^
+    prune = fetch --prune
+    stash-all = stash save --include-untracked
 
 [color]
     ui = true
 
+[merge]
+    ff = only
+    conflictstyle = diff3
+
 [push]
     default = simple
+
+[status]
+    showUntrackedFiles = all
 
 [gist]
     browse = true
