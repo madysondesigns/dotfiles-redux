@@ -26,7 +26,7 @@
     ra = !git r --all
     ass = add
     mad = add *
-    aa = add --all .
+    aa = add --all
     rmd = add -u
     edit = commit --amend
     comp = !git l --no-merges
