@@ -24,7 +24,7 @@ Run push script:
 
 # TODO
 
-- [x] Write a script to do the above automatically.
+- [x] Write a script to do install * symlinking automatically.
 - [x] Figure out autocompletion
 
 ## Sublime Setup
