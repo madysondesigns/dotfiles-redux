@@ -1,8 +1,21 @@
 # dotfiles-redux
 Better (hopefully speedier) dotfiles. 
 
-To use:
+## Things to install
 
+Prerequisites:
+- Homebrew
+	- Git
+
+Useful things:
+- Autojump
+- NPM
+- rbenv
+
+
+## How to use
+
+~~
 Include Git things in `~/.gitconfig`:
 
 ```bash
@@ -17,8 +30,9 @@ Include bash profile things in `~/.profile`:
 source ~/src/dotfiles-redux/.sdubs_profile
 source ~/src/dotfiles-redux/.better_profile
 ```
+~~
 
 # TODO
 
-- Write a script to do the above automatically.
-- Figure out autocompletion
+- [x] Write a script to do the above automatically.
+- [x] Figure out autocompletion

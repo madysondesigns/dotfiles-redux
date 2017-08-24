@@ -14,6 +14,7 @@
 [alias]
     push = "!git push || $(git push 2>&1 | tail -n2 | head -n1)"
     pull = pull --ff-only
+    up = pull --rebase --autostash
     st = status
     ci = commit -v
     co = checkout
