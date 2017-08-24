@@ -4,7 +4,7 @@
 
 dots="$PWD"
 old_dots=$HOME/.old_dots             # old dotfiles backup directory
-master_dot=$HOME/.profile
+master_dot=$HOME/.bash_profile
 files=".githelpers .bash_prompt"         # list of files/folders to symlink in homedir
 
 ########## Link dotfiles that need to be in ~
@@ -48,7 +48,7 @@ if grep -q $dots "$master_dot"; then
 else
     echo "Linking custom profiles..."
     echo "source $dots/.sdubs_profile" >> "$master_dot"
-    echo "source $dots/.better_profile" >> "$master_dot"
+    # echo "source $dots/.better_profile" >> "$master_dot"
 fi
 
 # Add dotfiles .gitconfig to ~/.gitconfig
@@ -59,5 +59,4 @@ git config --global core.excludesfile "$dots/.gitignore_global"
 
 ########## Re-source main .profile
 echo "Re-sourcing $master_dot..."
-exec $SHELL -l
-# source ~/.vimrc
+. $master_dot

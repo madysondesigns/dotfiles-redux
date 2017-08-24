@@ -1,5 +1,7 @@
 # All the config I will probably never need.
 
+# Homebrew prereqs: git, autojump
+
 # path crap
 [[ -d $HOME/.bin ]] && export PATH=$HOME/.bin:$PATH
 
