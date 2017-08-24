@@ -57,6 +57,20 @@ git config --global include.path "$dots/.gitconfig"
 git config --global core.excludesfile "$dots/.gitignore_global"
 
 
+########## Set up helpers
+
+# Create .bin in home dir
+mkdir -p $HOME/.bin
+
+# Sublime Text
+if [[ -d "/Applications/Sublime Text.app/" ]]; then
+    echo "Installing subl alias..."
+    ln -fs "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/.bin/subl
+else
+    echo "Sublime Text not installed."
+fi
+
+
 ########## Re-source main .profile
 echo "Re-sourcing $master_dot..."
 . $master_dot

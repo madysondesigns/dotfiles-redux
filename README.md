@@ -11,26 +11,16 @@ Useful things:
 - Autojump
 - NPM
 - rbenv
+- hub
 
 
 ## How to use
 
-~~
-Include Git things in `~/.gitconfig`:
+Run push script:
 
 ```bash
-[include]
-    path = ~/src/dotfiles-redux/.gitconfig
+./pu.sh
 ```
-
-
-Include bash profile things in `~/.profile`:
-
-```bash
-source ~/src/dotfiles-redux/.sdubs_profile
-source ~/src/dotfiles-redux/.better_profile
-```
-~~
 
 # TODO
 
