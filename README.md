@@ -4,8 +4,8 @@ Better (hopefully speedier) dotfiles.
 ## Things to install
 
 Prerequisites:
-- Homebrew
-	- Git
+- Homebrew: `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+	- Git: `brew install git`
 
 Useful things:
 - Autojump
