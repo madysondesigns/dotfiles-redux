@@ -1,7 +1,8 @@
 # All the config I will probably never need.
 
 # path crap
-[[ -d $HOME/.bin ]] && export PATH=$HOME/.bin:$PATH
+
+export PATH=$HOME/.bin:$PATH
 
 # set default editor
 export EDITNOW='subl'
