@@ -26,3 +26,8 @@ Run push script:
 
 - [x] Write a script to do the above automatically.
 - [x] Figure out autocompletion
+
+## Sublime Setup
+
+1. Install Package Control
+2. [Symlink User folder](https://packagecontrol.io/docs/syncing)
