@@ -19,8 +19,11 @@ fi
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks
 echo "Checking for existing dotfiles ($files)..."
 for file in $files; do
-    if [[ -f $file ]]; then
-        echo "Moving existing $file from ~ to $old_dots..."
+    if [[ -L $HOME/$file ]]; then
+        echo "Symlink to $file already exists, deleting..."
+        unlink $HOME/$file
+    elif [[ -f $HOME/$file ]]; then
+        echo "Moving existing $file from ~/ to $old_dots..."
 
         if [[ -f $old_dots/$file ]]; then
             echo "Backup $file already exists, deleting..."
@@ -28,13 +31,10 @@ for file in $files; do
         fi
 
         mv ~/$file $old_dots
-    elif [[ ! -L $file ]]; then
-        echo "Symlink to $file already exists, deleting..."
-        unlink ~/$file
     fi
 
     echo "Creating symlink to $file in home directory..."
-    ln -s $dots/$file ~/$file
+    ln -s $dots/$file $HOME/$file
 done
 
 
@@ -86,5 +86,5 @@ fi
 
 
 ########## Re-source main .profile
-echo "Re-sourcing $master_dot..."
-. $master_dot
+echo "Please re-source the master dotfile to get the new hotness."
+echo "e.g. \`source $master_dot\`"
