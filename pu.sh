@@ -3,11 +3,12 @@
 ########## Variables
 
 dots="$PWD"
-old_dots=$HOME/.old_dots             # old dotfiles backup directory
 master_dot=$HOME/.bash_profile
-files=".githelpers .bash_prompt"         # list of files/folders to symlink in homedir
+work_dot=$HOME/.work_profile
+old_dots=$HOME/.old_dots  # directory to back up any existing dotfiles to
+files=".githelpers .bash_prompt .sdubs_profile"  # list of files/folders in this repo to symlink in homedir
 
-########## Link dotfiles that need to be in ~
+########## Link dotfiles that need to be in ~/
 
 # create dots_old in homedir
 if [[ ! -d $old_dots ]]; then
@@ -16,6 +17,7 @@ if [[ ! -d $old_dots ]]; then
 fi
 
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks
+echo "Checking for existing dotfiles ($files)..."
 for file in $files; do
     if [[ -f $file ]]; then
         echo "Moving existing $file from ~ to $old_dots..."
@@ -38,9 +40,21 @@ done
 
 ########## Source other dotfiles
 
-# If we don't have $master_dot (.profile), create it
-if [ ! -f "$master_dot" ] ; then
+# If we don't have $master_dot (.bash_profile), create it
+if [[ ! -f "$master_dot" ]] ; then
+    echo "Creating $master_dot..."
     touch "$master_dot"
+else
+    echo "$master_dot already exists, skipping..."
+fi
+
+# If we don't have $work_dot (.work_profile), create it
+if [[ ! -f "$work_dot" ]] ; then
+    echo "Creating $work_dot..."
+    touch "$work_dot"
+    echo -e "# Work-specific config stuff \n" >> $work_dot
+else
+    echo "$work_dot already exists, skipping..."
 fi
 
 if grep -q $dots "$master_dot"; then
@@ -48,7 +62,7 @@ if grep -q $dots "$master_dot"; then
 else
     echo "Linking custom profiles..."
     echo "source $dots/.sdubs_profile" >> "$master_dot"
-    # echo "source $dots/.better_profile" >> "$master_dot"
+    echo "source $work_dot" >> "$master_dot"
 fi
 
 # Add dotfiles .gitconfig to ~/.gitconfig
