@@ -3,7 +3,14 @@
 	"color_scheme": "Packages/User/SublimeLinter/Flatland Monokai (SL).tmTheme",
 	"create_window_at_startup": false,
 	"ensure_newline_at_eof_on_save": true,
-	"folder_exclude_patterns": [".git", ".idea", ".sass-cache" ],
+	"folder_exclude_patterns":
+	[
+		".git",
+		".idea",
+		".sass-cache",
+		"node_modules"
+	],
+	"font_size": 14,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[

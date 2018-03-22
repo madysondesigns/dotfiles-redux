@@ -39,6 +39,9 @@ alias subl="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
 # Autojump
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
+# iTerm shell integration
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
 
 # do close spelling matches with cd
 shopt -s cdspell
