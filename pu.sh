@@ -1,5 +1,20 @@
 #!/bin/bash
 
+########## Check for Homebrew/Git
+
+if which brew &> /dev/null; then
+    # if [ -f $(brew --prefix)/etc/bash_completion.d/git-* ]; then
+    if brew ls --versions git &> /dev/null; then
+        echo "Homebrew and Git installed, continuing to dot the files..."
+    else
+        echo "Homebrew Git not installed."
+        exit 1
+    fi
+else
+    echo "Homebrew not installed. Install it from https://brew.sh/."
+    exit 1
+fi
+
 ########## Variables
 
 dots="$PWD"
