@@ -7,7 +7,7 @@ if which brew &> /dev/null; then
     if brew ls --versions git &> /dev/null; then
         echo "Homebrew and Git installed, continuing to dot the files..."
     else
-        echo "Homebrew Git not installed."
+        echo "Homebrew Git not installed. Install it with `brew install git`."
         exit 1
     fi
 else
