@@ -10,10 +10,9 @@ Install Dropbox and make sure Sync folder has finished syncing.
 
 Files that live in the home folder:
 - `.bash_profile`: master dotfile that sources in all other files
-- `.work_profile`: work-specific vars and config
-- `.local/` folder: config for this machine: secure stuff, vars for dev & dropbox folders, etc.
+- `.local_profile`: local vars and config (e.g. work machine)
 
-Files that get symlinked into the master dotfile:
+Files that live in this repo and get symlinked into home:
 - `.sdubs_profile`: all my config: aliases, prefs, etc.
 - `.bash_prompt`: terminal colors & settings
 - `.githelpers`: git-specific scripts
@@ -52,9 +51,3 @@ After running the script, you'll need to manually set up Sublime and iTerm pref 
 
 1. Enable 'Load preferences from a custom folder or URL:'
 2. Choose the `iterm` folder from Dropbox
-
-
-# TODO
-
-- [x] Write a script to do install * symlinking automatically.
-- [x] Figure out autocompletion
