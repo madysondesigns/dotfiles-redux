@@ -6,6 +6,18 @@ Better (hopefully speedier) dotfiles.
 
 Install Dropbox and make sure Sync folder has finished syncing.
 
+## Orientation
+
+Files that live in the home folder:
+- `.bash_profile`: master dotfile that sources in all other files
+- `.local_profile`: local vars and config (e.g. work machine)
+
+Files that live in this repo and get symlinked into home:
+- `.sdubs_profile`: all my config: aliases, prefs, etc.
+- `.bash_prompt`: terminal colors & settings
+- `.githelpers`: git-specific scripts
+
+
 ## How to use
 
 Run push script:
@@ -39,9 +51,3 @@ After running the script, you'll need to manually set up Sublime and iTerm pref 
 
 1. Enable 'Load preferences from a custom folder or URL:'
 2. Choose the `iterm` folder from Dropbox
-
-
-# TODO
-
-- [x] Write a script to do install * symlinking automatically.
-- [x] Figure out autocompletion

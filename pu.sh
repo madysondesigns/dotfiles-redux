@@ -6,27 +6,47 @@ echo "Setting up dotfiles..."
 # Run initial setup
 # Symlinks dev and Dropbox folders, sets up Homebrew stuff
 ###############################################################################
-sh ./bootstrap.sh
+echo "Bootstrapping... (enter to skip)"
+read -t 3 -n 1 answer
+if [ $? == 0 ]; then
+    echo "Skipping."
+else
+    sh ./bootstrap.sh
+fi
 
-########## Variables
+
+###############################################################################
+# Variables
+###############################################################################
 
 dots="$PWD"
 master_dot=$HOME/.bash_profile
-work_dot=$HOME/.work_profile
-old_dots=$HOME/.old_dots  # directory to back up any existing dotfiles to
-files=".githelpers .bash_prompt .sdubs_profile"  # list of files/folders in this repo to symlink in homedir
+old_dots=$HOME/.old_dots
+local_dot=$HOME/.local_profile
+sym_dots=".githelpers .bash_prompt .sdubs_profile"
 
-########## Link dotfiles that need to be in ~/
 
-# create dots_old in homedir
+###############################################################################
+# Crete master file and backup folder if needed
+###############################################################################
+if [[ ! -f "$master_dot" ]] ; then
+    echo "Creating $master_dot..."
+    touch "$master_dot"
+else
+    echo "$master_dot already exists, skipping..."
+fi
+
 if [[ ! -d $old_dots ]]; then
     echo "Creating $old_dots for backup of any existing dotfiles in ~/"
     mkdir -p $old_dots
 fi
 
-# move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks
-echo "Checking for existing dotfiles ($files)..."
-for file in $files; do
+
+###############################################################################
+# Symlink dotfiles that live in this repo
+###############################################################################
+echo "Checking for existing symlink dotfiles ($sym_dots)..."
+for file in $sym_dots; do
     if [[ -L $HOME/$file ]]; then
         echo "Symlink to $file already exists, deleting..."
         unlink $HOME/$file
@@ -46,45 +66,45 @@ for file in $files; do
 done
 
 
-########## Source other dotfiles
-
-# If we don't have $master_dot (.bash_profile), create it
-if [[ ! -f "$master_dot" ]] ; then
-    echo "Creating $master_dot..."
-    touch "$master_dot"
+###############################################################################
+# Create a dotfile for local config
+###############################################################################
+echo "Checking for existing local config ($local_dot)..."
+if [[ ! -f "$local_dot" ]] ; then
+    echo "Creating $local_dot..."
+    touch "$local_dot"
+    echo -e "# Config specific to this machine \n" >> $local_dot
 else
-    echo "$master_dot already exists, skipping..."
+    echo "$local_dot already exists, skipping..."
 fi
 
-# If we don't have $work_dot (.work_profile), create it
-if [[ ! -f "$work_dot" ]] ; then
-    echo "Creating $work_dot..."
-    touch "$work_dot"
-    echo -e "# Work-specific config stuff \n" >> $work_dot
-else
-    echo "$work_dot already exists, skipping..."
-fi
-
-if grep -q $dots "$master_dot"; then
+###############################################################################
+# Source dotfiles into master
+###############################################################################
+if grep -q "sdubs_profile" "$master_dot"; then
     echo "Custom files already linked, skipping..."
 else
     echo "Linking custom profiles..."
-    echo "source $dots/.sdubs_profile" >> "$master_dot"
-    echo "source $work_dot" >> "$master_dot"
+    echo "source $HOME/.sdubs_profile" >> "$master_dot"
 fi
 
-# Add dotfiles .gitconfig to ~/.gitconfig
-echo "Linking custom gitconfig..."
+if grep -q $local_dot "$master_dot"; then
+    echo "Local files already linked, skipping..."
+else
+    echo "Linking local profiles..."
+    echo "source $local_dot" >> "$master_dot"
+fi
+
+
+###############################################################################
+# Set up helpers
+###############################################################################
+echo "Setting up custom gitconfig..."
 git config --global include.path "$dots/.gitconfig"
 git config --global core.excludesfile "$dots/.gitignore_global"
 
-
-########## Set up helpers
-
-# Create .bin in home dir
 mkdir -p $HOME/.bin
 
-# Sublime Text
 if [[ -d "/Applications/Sublime Text.app/" ]]; then
     echo "Installing subl alias..."
     ln -fs "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/.bin/subl
@@ -93,6 +113,8 @@ else
 fi
 
 
-########## Re-source main .profile
+###############################################################################
+# Success!
+###############################################################################
 echo "Please re-source the master dotfile to get the new hotness."
 echo "e.g. \`source $master_dot\`"
