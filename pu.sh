@@ -1,19 +1,12 @@
 #!/bin/bash
 
-########## Check for Homebrew/Git
+echo "Setting up dotfiles..."
 
-if which brew &> /dev/null; then
-    # if [ -f $(brew --prefix)/etc/bash_completion.d/git-* ]; then
-    if brew ls --versions git &> /dev/null; then
-        echo "Homebrew and Git installed, continuing to dot the files..."
-    else
-        echo "Homebrew Git not installed. Install it with `brew install git`."
-        exit 1
-    fi
-else
-    echo "Homebrew not installed. Install it from https://brew.sh/."
-    exit 1
-fi
+###############################################################################
+# Run initial setup
+# Symlinks dev and Dropbox folders, sets up Homebrew stuff
+###############################################################################
+sh ./bootstrap.sh
 
 ########## Variables
 
