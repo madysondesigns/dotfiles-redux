@@ -6,6 +6,19 @@ Better (hopefully speedier) dotfiles.
 
 Install Dropbox and make sure Sync folder has finished syncing.
 
+## Orientation
+
+Files that live in the home folder:
+- `.bash_profile`: master dotfile that sources in all other files
+- `.work_profile`: work-specific vars and config
+- `.local/` folder: config for this machine: secure stuff, vars for dev & dropbox folders, etc.
+
+Files that get symlinked into the master dotfile:
+- `.sdubs_profile`: all my config: aliases, prefs, etc.
+- `.bash_prompt`: terminal colors & settings
+- `.githelpers`: git-specific scripts
+
+
 ## How to use
 
 Run push script:

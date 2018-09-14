@@ -12,21 +12,31 @@ sh ./bootstrap.sh
 
 dots="$PWD"
 master_dot=$HOME/.bash_profile
-work_dot=$HOME/.work_profile
 old_dots=$HOME/.old_dots  # directory to back up any existing dotfiles to
-files=".githelpers .bash_prompt .sdubs_profile"  # list of files/folders in this repo to symlink in homedir
+local_dots=".work_profile .local/.env" # list of files/folders that need to live locally
+symlinks=".githelpers .bash_prompt .sdubs_profile"  # list of files/folders in this repo to symlink in homedir
 
-########## Link dotfiles that need to be in ~/
 
-# create dots_old in homedir
+########## If we don't have $master_dot (.bash_profile) or backup folder (.old_dots/), create them
+
+if [[ ! -f "$master_dot" ]] ; then
+    echo "Creating $master_dot..."
+    touch "$master_dot"
+else
+    echo "$master_dot already exists, skipping..."
+fi
+
 if [[ ! -d $old_dots ]]; then
     echo "Creating $old_dots for backup of any existing dotfiles in ~/"
     mkdir -p $old_dots
 fi
 
+########## Symlink dotfiles that can live in this repo
+
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks
-echo "Checking for existing dotfiles ($files)..."
-for file in $files; do
+# TODO: can this be simplified by just sourcing bash_prompt and sdubs_profile separately?
+echo "Checking for existing symlink dotfiles ($symlinks)..."
+for file in $symlinks; do
     if [[ -L $HOME/$file ]]; then
         echo "Symlink to $file already exists, deleting..."
         unlink $HOME/$file
@@ -45,41 +55,49 @@ for file in $files; do
     ln -s $dots/$file $HOME/$file
 done
 
+########## Create dotfiles that need to live locally
 
-########## Source other dotfiles
+echo "Checking for existing local dotfiles ($local_dots)..."
+for file in $local_dots; do
+    if [[ ! -f $HOME/$file ]] ; then
+        echo "Creating $file..."
+        touch $HOME/$file
+        echo -e "# Local config: $file \n" >> $HOME/$file
+    else
+        echo "$file already exists, skipping..."
+    fi
+done
 
-# If we don't have $master_dot (.bash_profile), create it
-if [[ ! -f "$master_dot" ]] ; then
-    echo "Creating $master_dot..."
-    touch "$master_dot"
-else
-    echo "$master_dot already exists, skipping..."
-fi
+########## Source other dotfiles into master
 
-# If we don't have $work_dot (.work_profile), create it
-if [[ ! -f "$work_dot" ]] ; then
-    echo "Creating $work_dot..."
-    touch "$work_dot"
-    echo -e "# Work-specific config stuff \n" >> $work_dot
-else
-    echo "$work_dot already exists, skipping..."
-fi
-
+# source symlink files
+## TODO: fix this loop, can it be simplified?
 if grep -q $dots "$master_dot"; then
     echo "Custom files already linked, skipping..."
 else
     echo "Linking custom profiles..."
     echo "source $dots/.sdubs_profile" >> "$master_dot"
-    echo "source $work_dot" >> "$master_dot"
 fi
 
-# Add dotfiles .gitconfig to ~/.gitconfig
-echo "Linking custom gitconfig..."
-git config --global include.path "$dots/.gitconfig"
-git config --global core.excludesfile "$dots/.gitignore_global"
+# source local files
+## TODO: can I symlink only one file?
+for file in $local_dots; do
+    if grep -q $dots "$master_dot"; then
+        echo "Custom files already linked, skipping..."
+    else
+        echo "Linking custom profiles..."
+        echo "source $dots/.sdubs_profile" >> "$master_dot"
+    fi
+done
 
 
 ########## Set up helpers
+
+# Add githelpers, gitconfig, and gitignore
+echo "Setting up custom gitconfig..."
+ln -fs "$dots/.githelpers" "$HOME/.githelpers"
+git config --global include.path "$dots/.gitconfig"
+git config --global core.excludesfile "$dots/.gitignore_global"
 
 # Create .bin in home dir
 mkdir -p $HOME/.bin
