@@ -14,17 +14,21 @@ else
     sh ./bootstrap.sh
 fi
 
-########## Variables
+
+###############################################################################
+# Variables
+###############################################################################
 
 dots="$PWD"
 master_dot=$HOME/.bash_profile
-old_dots=$HOME/.old_dots  # directory to back up any existing dotfiles to
-local_dots=".work_profile .local/.env" # list of files/folders that need to live locally
-symlinks=".githelpers .bash_prompt .sdubs_profile"  # list of files/folders in this repo to symlink in homedir
+old_dots=$HOME/.old_dots
+local_dot=$HOME/.local_profile
+sym_dots=".githelpers .bash_prompt .sdubs_profile"
 
 
-########## If we don't have $master_dot (.bash_profile) or backup folder (.old_dots/), create them
-
+###############################################################################
+# Crete master file and backup folder if needed
+###############################################################################
 if [[ ! -f "$master_dot" ]] ; then
     echo "Creating $master_dot..."
     touch "$master_dot"
@@ -37,12 +41,12 @@ if [[ ! -d $old_dots ]]; then
     mkdir -p $old_dots
 fi
 
-########## Symlink dotfiles that can live in this repo
 
-# move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks
-# TODO: can this be simplified by just sourcing bash_prompt and sdubs_profile separately?
-echo "Checking for existing symlink dotfiles ($symlinks)..."
-for file in $symlinks; do
+###############################################################################
+# Symlink dotfiles that live in this repo
+###############################################################################
+echo "Checking for existing symlink dotfiles ($sym_dots)..."
+for file in $sym_dots; do
     if [[ -L $HOME/$file ]]; then
         echo "Symlink to $file already exists, deleting..."
         unlink $HOME/$file
@@ -61,54 +65,46 @@ for file in $symlinks; do
     ln -s $dots/$file $HOME/$file
 done
 
-########## Create dotfiles that need to live locally
 
-echo "Checking for existing local dotfiles ($local_dots)..."
-for file in $local_dots; do
-    if [[ ! -f $HOME/$file ]] ; then
-        echo "Creating $file..."
-        touch $HOME/$file
-        echo -e "# Local config: $file \n" >> $HOME/$file
-    else
-        echo "$file already exists, skipping..."
-    fi
-done
+###############################################################################
+# Create a dotfile for local config
+###############################################################################
+echo "Checking for existing local config ($local_dot)..."
+if [[ ! -f "$local_dot" ]] ; then
+    echo "Creating $local_dot..."
+    touch "$local_dot"
+    echo -e "# Config specific to this machine \n" >> $local_dot
+else
+    echo "$local_dot already exists, skipping..."
+fi
 
-########## Source other dotfiles into master
-
-# source symlink files
-## TODO: fix this loop, can it be simplified?
-if grep -q $dots "$master_dot"; then
+###############################################################################
+# Source dotfiles into master
+###############################################################################
+if grep -q "sdubs_profile" "$master_dot"; then
     echo "Custom files already linked, skipping..."
 else
     echo "Linking custom profiles..."
-    echo "source $dots/.sdubs_profile" >> "$master_dot"
+    echo "source $HOME/.sdubs_profile" >> "$master_dot"
 fi
 
-# source local files
-## TODO: can I symlink only one file?
-for file in $local_dots; do
-    if grep -q $dots "$master_dot"; then
-        echo "Custom files already linked, skipping..."
-    else
-        echo "Linking custom profiles..."
-        echo "source $dots/.sdubs_profile" >> "$master_dot"
-    fi
-done
+if grep -q $local_dot "$master_dot"; then
+    echo "Local files already linked, skipping..."
+else
+    echo "Linking local profiles..."
+    echo "source $local_dot" >> "$master_dot"
+fi
 
 
-########## Set up helpers
-
-# Add githelpers, gitconfig, and gitignore
+###############################################################################
+# Set up helpers
+###############################################################################
 echo "Setting up custom gitconfig..."
-ln -fs "$dots/.githelpers" "$HOME/.githelpers"
 git config --global include.path "$dots/.gitconfig"
 git config --global core.excludesfile "$dots/.gitignore_global"
 
-# Create .bin in home dir
 mkdir -p $HOME/.bin
 
-# Sublime Text
 if [[ -d "/Applications/Sublime Text.app/" ]]; then
     echo "Installing subl alias..."
     ln -fs "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/.bin/subl
@@ -117,6 +113,8 @@ else
 fi
 
 
-########## Re-source main .profile
+###############################################################################
+# Success!
+###############################################################################
 echo "Please re-source the master dotfile to get the new hotness."
 echo "e.g. \`source $master_dot\`"
