@@ -6,7 +6,13 @@ echo "Setting up dotfiles..."
 # Run initial setup
 # Symlinks dev and Dropbox folders, sets up Homebrew stuff
 ###############################################################################
-sh ./bootstrap.sh
+echo "Bootstrapping... (enter to skip)"
+read -t 3 -n 1 answer
+if [ $? == 0 ]; then
+    echo "Skipping."
+else
+    sh ./bootstrap.sh
+fi
 
 ########## Variables
 
