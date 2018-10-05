@@ -82,6 +82,8 @@ echo "Homebrew: installing utilities & packages..."
 brew install bash-completion
 brew install git
 brew install autojump
+brew cask install keepingyouawake
+brew cask install alfred
 
 
 ###############################################################################
