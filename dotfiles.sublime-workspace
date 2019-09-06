@@ -1,0 +1,878 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"def",
+				"defaultProp"
+			],
+			[
+				"back",
+				"background-color\tproperty"
+			],
+			[
+				"Te",
+				"TextColorDemo"
+			],
+			[
+				"inli",
+				"inline-block"
+			],
+			[
+				"Second",
+				"SecondaryHeading"
+			],
+			[
+				"swa",
+				"swatchPairs"
+			],
+			[
+				"to",
+				"toPairs"
+			],
+			[
+				"sw",
+				"swatches"
+			],
+			[
+				"bac",
+				"backgroundClassesMapping"
+			],
+			[
+				"$primary",
+				"$primary-color-darker"
+			],
+			[
+				"Prim",
+				"PrimaryHeading"
+			],
+			[
+				"alig",
+				"align-self\tproperty"
+			],
+			[
+				"class",
+				"className"
+			],
+			[
+				"Padd",
+				"PaddingDirectionR"
+			],
+			[
+				"Padding",
+				"PaddingDirectionL"
+			],
+			[
+				"in",
+				"inline-block"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": ".gitconfig",
+			"settings":
+			{
+				"buffer_size": 1136,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"prett",
+				"JsPrettier: Format Code"
+			],
+			[
+				"bab",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"pre",
+				"JsPrettier: Format Code"
+			],
+			[
+				"pret",
+				"JsPrettier: Format Code"
+			],
+			[
+				"bash",
+				"Set Syntax: Bourne Again Shell (bash)"
+			],
+			[
+				"babe",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"inde",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"babel",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"jav",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"ba",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"emm",
+				"Emmet: Reload Extensions"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"diff",
+				"Set Syntax: Diff"
+			],
+			[
+				"pack",
+				"Package Control: List Packages"
+			],
+			[
+				"bable",
+				"Set Syntax: JavaScript (Babel)"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 136.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/swhinnem/src/dotfiles-redux"
+	],
+	"file_history":
+	[
+		"/Users/swhinnem/src/dotfiles-redux/.gitignore_global",
+		"/Users/swhinnem/src/patient_portal/patient_portal/webpack/src/_atrium-variables-shim.scss",
+		"/Users/swhinnem/src/patient_portal/patient_portal/webpack/src/common/responsive.js",
+		"/Users/swhinnem/src/patient_portal/patient_portal/webpack/src/common/header/_header.scss",
+		"/Users/swhinnem/src/patient_portal/patient_portal/webpack/src/messages/components/MessagesOverview.js",
+		"/Users/swhinnem/src/patient_portal/patient_portal/webpack/src/messages/components/MessagesTable.js",
+		"/Users/swhinnem/src/patient_portal/patient_portal/webpack/src/messages/messages.scss",
+		"/Users/swhinnem/src/patient_portal/patient_portal/webpack/src/app/components/App.js",
+		"/Users/swhinnem/src/patient_portal/patient_portal/webpack/src/common/header/components/AccountSettings.js",
+		"/Users/swhinnem/src/patient_portal/README.md",
+		"/Users/swhinnem/src/patient_portal/.git/COMMIT_EDITMSG",
+		"/var/folders/q3/b4b9wmws0kb09lmzxg4vrf9r0000gr/T/edit.3035od8zdb28wkwk/new-commit",
+		"/var/folders/q3/b4b9wmws0kb09lmzxg4vrf9r0000gr/T/edit.duq5p09x9sg8cok8/new-commit",
+		"/var/folders/q3/b4b9wmws0kb09lmzxg4vrf9r0000gr/T/edit.bk8gafuzqfk88c0o/new-commit",
+		"/Users/swhinnem/src/patient_portal/dev-settings.cfg",
+		"/Users/swhinnem/src/design/src/Modal/_modal.scss",
+		"/var/folders/q3/b4b9wmws0kb09lmzxg4vrf9r0000gr/T/edit.8dj27uv6oog88ggc/differential-update-comments",
+		"/var/folders/q3/b4b9wmws0kb09lmzxg4vrf9r0000gr/T/edit.atun1euz320w0skw/differential-update-comments",
+		"/Users/swhinnem/src/design/CHANGELOG.md",
+		"/var/folders/q3/b4b9wmws0kb09lmzxg4vrf9r0000gr/T/edit.9dhjlut7p748o4ck/differential-update-comments",
+		"/var/folders/q3/b4b9wmws0kb09lmzxg4vrf9r0000gr/T/edit.4tzzrmhgrrc4gk08/differential-update-comments",
+		"/var/folders/q3/b4b9wmws0kb09lmzxg4vrf9r0000gr/T/edit.cah8m66xv1sss80g/differential-update-comments",
+		"/Users/swhinnem/src/design/.git/COMMIT_EDITMSG",
+		"/Users/swhinnem/src/design/docs/pages.js",
+		"/var/folders/q3/b4b9wmws0kb09lmzxg4vrf9r0000gr/T/edit.cbeurgdtbps80ows/differential-update-comments",
+		"/var/folders/q3/b4b9wmws0kb09lmzxg4vrf9r0000gr/T/edit.77luzkmwss0sk4cs/new-commit",
+		"/var/folders/q3/b4b9wmws0kb09lmzxg4vrf9r0000gr/T/edit.91zu65lxc6kok808/new-commit",
+		"/var/folders/q3/b4b9wmws0kb09lmzxg4vrf9r0000gr/T/edit.avepsqrhx3scwwoc/new-commit",
+		"/Users/swhinnem/src/design/docs/Components/Pages/TeamHome/TeamHome.js",
+		"/Users/swhinnem/src/design/docs/Components/Pages/TeamHome/TeamHome.mdx",
+		"/Users/swhinnem/src/design/bin/generate_asketch_file",
+		"/Users/swhinnem/src/design/src/Table/Table.docs.js",
+		"/Users/swhinnem/src/design/src/Table/examples/ReactTablePaginationExample.js",
+		"/Users/swhinnem/src/design/src/Table/_table.scss",
+		"/Users/swhinnem/src/design/src/Button/_button.scss",
+		"/Users/swhinnem/src/design/docs/static/testLibrary.sketch",
+		"/Users/swhinnem/src/design/docs/static/Atrium-Remote-Library.sketchplugin/Contents/Sketch/Remote_Library.cocoascript",
+		"/Users/swhinnem/src/design/docs/static/library.xml",
+		"/Users/swhinnem/src/design/bin/common",
+		"/var/folders/q3/b4b9wmws0kb09lmzxg4vrf9r0000gp/T/edit.e7cjyjzx12go04o0/differential-update-comments",
+		"/var/folders/q3/b4b9wmws0kb09lmzxg4vrf9r0000gp/T/edit.bv81q0c7poo404ow/differential-update-comments",
+		"/Users/swhinnem/src/design/src/Icons/Icons/Menu.js",
+		"/Users/swhinnem/src/design/src/Icons/Icons/Warning.js",
+		"/Users/swhinnem/src/design/src/Icons/Icons/WarningCircle.js",
+		"/var/folders/q3/b4b9wmws0kb09lmzxg4vrf9r0000gp/T/edit.cbtpjf60lmgwccg0/differential-update-comments",
+		"/Users/swhinnem/src/design/package.json",
+		"/Users/swhinnem/src/design/src/Collapse/components/Collapse.js",
+		"/Users/swhinnem/src/design/src/MultiSelect/components/MultiSelect.test.js",
+		"/Users/swhinnem/src/design/src/SingleSelect/components/SingleSelect.test.js",
+		"/Users/swhinnem/src/design/src/SingleSelectFuzzy/components/SingleSelectFuzzy.test.js",
+		"/var/folders/q3/b4b9wmws0kb09lmzxg4vrf9r0000gp/T/edit.awxggzhtyko4w4ws/differential-update-comments",
+		"/var/folders/q3/b4b9wmws0kb09lmzxg4vrf9r0000gp/T/edit.23tu2d6tkjggs8s8/differential-update-comments",
+		"/Users/swhinnem/src/design/src/SideNav/components/NavGroup.test.js",
+		"/var/folders/q3/b4b9wmws0kb09lmzxg4vrf9r0000gp/T/edit.2ipps8twg7c4gcco/differential-update-comments",
+		"/var/folders/q3/b4b9wmws0kb09lmzxg4vrf9r0000gp/T/edit.87yhq4z6wvks4o8c/new-commit",
+		"/var/folders/q3/b4b9wmws0kb09lmzxg4vrf9r0000gp/T/edit.t9o7c6cx6680cwgc/new-commit",
+		"/Users/swhinnem/src/design/docs/Components/Pages/Color.js",
+		"/var/folders/q3/b4b9wmws0kb09lmzxg4vrf9r0000gp/T/edit.1ixveswfb6v48oso/differential-update-comments",
+		"/var/folders/q3/b4b9wmws0kb09lmzxg4vrf9r0000gp/T/edit.btv2df8smpwgoo0g/differential-update-comments",
+		"/var/folders/q3/b4b9wmws0kb09lmzxg4vrf9r0000gp/T/edit.6sf86vzrp4cok0sw/new-commit",
+		"/Users/swhinnem/src/design/.git/rebase-merge/git-rebase-todo",
+		"/var/folders/q3/b4b9wmws0kb09lmzxg4vrf9r0000gp/T/edit.a3z4wd8ps2okwc8c/differential-update-comments",
+		"/var/folders/q3/b4b9wmws0kb09lmzxg4vrf9r0000gp/T/edit.9orf57sxcu80cgw8/new-commit",
+		"/var/folders/q3/b4b9wmws0kb09lmzxg4vrf9r0000gp/T/edit.1xoltof39rz4k44k/new-commit",
+		"/Users/swhinnem/src/design/src/Icons/Icons/Archive.js",
+		"/Users/swhinnem/src/design/src/Icons/Icons.docs.js",
+		"/Users/swhinnem/src/design/src/Icons/examples/ColorExample.js",
+		"/var/folders/q3/b4b9wmws0kb09lmzxg4vrf9r0000gp/T/edit.awrelv0bbmgckook/differential-update-comments",
+		"/var/folders/q3/b4b9wmws0kb09lmzxg4vrf9r0000gp/T/edit.81n6zga31zksc4g4/differential-update-comments",
+		"/var/folders/q3/b4b9wmws0kb09lmzxg4vrf9r0000gp/T/edit.83p8hbp4akg0wg88/new-commit",
+		"/var/folders/q3/b4b9wmws0kb09lmzxg4vrf9r0000gp/T/edit.bdpocrppbw0ssswo/new-commit",
+		"/var/folders/q3/b4b9wmws0kb09lmzxg4vrf9r0000gp/T/edit.kns1fsfxra8ko4ss/new-commit",
+		"/Users/swhinnem/src/design/src/Icons/Icons/Circle.js",
+		"/Users/swhinnem/src/design/src/Icons/Icons/Attachment.js",
+		"/Users/swhinnem/src/design/src/Icons/Icons/Info.js",
+		"/Users/swhinnem/src/design/src/Icons/Icons/BaseIcon.js",
+		"/Users/swhinnem/src/design/src/Icons/Icons/Inbox.js",
+		"/Users/swhinnem/Library/Application Support/com.bohemiancoding.sketch3/Plugins/svgo.json",
+		"/Users/swhinnem/Desktop/carespace.svg",
+		"/Users/swhinnem/Desktop/carespace.1.svg",
+		"/Users/swhinnem/Downloads/baseline-file_copy-24px.svg",
+		"/Users/swhinnem/src/design/docs/static/Atrium-Remote-Library.sketchplugin/Contents/Sketch/manifest.json",
+		"/Users/swhinnem/src/design/.eslintrc.json",
+		"/Users/swhinnem/Desktop/things.csv",
+		"/Users/swhinnem/src/design/yarn.lock",
+		"/Users/swhinnem/src/design/docs/Components/Pages/Copy.js",
+		"/Users/swhinnem/src/design/docs/models/PageModel.js",
+		"/Users/swhinnem/src/design/docs/models/ComponentPageModel.js",
+		"/Users/swhinnem/src/design/docs/Components/Linking/DeepLink.js",
+		"/Users/swhinnem/src/design/src/Checkbox/examples/CheckboxGroupExample.js",
+		"/Users/swhinnem/src/design/src/Checkbox/Checkbox.docs.js",
+		"/Users/swhinnem/src/design/docs/models/ReactExampleModel.js",
+		"/Users/swhinnem/src/design/docs/models/ExampleModel.js",
+		"/Users/swhinnem/src/design/docs/Components/Pages/ComponentPage.js",
+		"/Users/swhinnem/src/design/docs/models/FunctionDocumentationModel.js",
+		"/Users/swhinnem/src/design/docs/models/BaseModel.js",
+		"/Users/swhinnem/src/design/src/styles/common/_deprecated.scss",
+		"/Users/swhinnem/src/design/src/atrium.scss",
+		"/Users/swhinnem/src/design/docs/Components/Pages/Spacing.js",
+		"/Users/swhinnem/src/design/src/Icons/Icons.js",
+		"/Users/swhinnem/src/design/src/Icons/IconsTable.js",
+		"/Users/swhinnem/src/design/src/Icons/index.js",
+		"/Users/swhinnem/src/design/src/Icons/Icons/ChatBubble.js",
+		"/Users/swhinnem/src/design/src/styles/common/_spacing.scss",
+		"/Users/swhinnem/src/design/src/Util/deprecatedAPI.js",
+		"/Users/swhinnem/src/design/src/Icons/_icons.scss",
+		"/Users/swhinnem/src/design/src/angular/export/icons.js",
+		"/Users/swhinnem/src/design/docs/styles/patterns/_variables.scss",
+		"/Users/swhinnem/src/design/src/styles/common/_variables.scss",
+		"/Users/swhinnem/src/design/src/styles/common/_icons.scss",
+		"/Users/swhinnem/src/design/docs/styles/patterns/_colors.scss",
+		"/Users/swhinnem/src/design/src/styles/common/_colors.scss",
+		"/Users/swhinnem/src/design/docs/Components/Contributors/People/SarahWhinnem.js",
+		"/Users/swhinnem/src/design/.gitlab-ci.yml",
+		"/Users/swhinnem/src/design/.arcconfig",
+		"/Users/swhinnem/src/design/docs/styles/patterns/_spacing.scss",
+		"/Users/swhinnem/src/design/docs/Components/Pages/Changelog.js",
+		"/Users/swhinnem/src/design/src/Alert/Alert.docs.js",
+		"/Users/swhinnem/src/design/docs/Components/APIDocumentation/ClassDocumentation.js",
+		"/Users/swhinnem/.sketchplugin.artboard-tools.userprefs.js",
+		"/Users/swhinnem/src/design/docs/models/ContributorModel.js",
+		"/Users/swhinnem/src/design/docs/Components/Contributors/ContributorInitialsAvatar.js",
+		"/Users/swhinnem/src/design/docs/Components/Contributors/People/CharlieImhoff.js",
+		"/Users/swhinnem/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/swhinnem/src/design/docs/Components/Contributors/ContributorImageAvatar.js",
+		"/Users/swhinnem/src/design/docs/Components/Pages/Contributing.js",
+		"/Users/swhinnem/src/design/docs/design/index.html",
+		"/Users/swhinnem/src/design/docs/design/library.xml"
+	],
+	"find":
+	{
+		"height": 33.0
+	},
+	"find_in_files":
+	{
+		"height": 97.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": ".gitconfig",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1136,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										5,
+										6
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/square_bracket.png",
+										"region.bluish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										0,
+										1
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										5,
+										6
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/square_bracket.png",
+										"region.bluish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										0,
+										1
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"syntax": "Packages/Git Formats/Git Config.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "dotfiles.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"read",
+				"README.md"
+			],
+			[
+				"var",
+				"src/styles/common/_variables.scss"
+			],
+			[
+				"atom",
+				"src/styles/common/_atomic-classes.scss"
+			],
+			[
+				"modal",
+				"src/Modal/_modal.scss"
+			],
+			[
+				"lab",
+				"docs/Lab/lab.js"
+			],
+			[
+				"chan",
+				"CHANGELOG.md"
+			],
+			[
+				"pack",
+				"package.json"
+			],
+			[
+				"vari",
+				"src/styles/common/_variables.scss"
+			],
+			[
+				"table",
+				"src/Table/_table.scss"
+			],
+			[
+				"cont",
+				"docs/Components/Pages/Contributing.js"
+			],
+			[
+				"page",
+				"docs/pages.js"
+			],
+			[
+				"genmdx",
+				"bin/generate_mdx.sh"
+			],
+			[
+				"contr",
+				"docs/Components/Pages/Contributing.js"
+			],
+			[
+				"pages",
+				"docs/pages.js"
+			],
+			[
+				"tables",
+				"src/Table/Table.docs.js"
+			],
+			[
+				"team",
+				"docs/Components/Pages/TeamHome/TeamHome.js"
+			],
+			[
+				"buttoncss",
+				"src/Button/_button.scss"
+			],
+			[
+				"libr",
+				"docs/static/library.xml"
+			],
+			[
+				"docume",
+				"docs/AtriumDocumentationApp.js"
+			],
+			[
+				"comm",
+				"build/common/webpack.common.js"
+			],
+			[
+				"menu",
+				"src/Icons/Icons/Menu.js"
+			],
+			[
+				"warn",
+				"src/Icons/Icons/WarningCircle.js"
+			],
+			[
+				"cha",
+				"CHANGELOG.md"
+			],
+			[
+				"color",
+				"docs/Components/Pages/Color.js"
+			],
+			[
+				"baseic",
+				"src/Icons/Icons/BaseIcon.js"
+			],
+			[
+				"change",
+				"CHANGELOG.md"
+			],
+			[
+				"icons",
+				"src/angular/export/icons.js"
+			],
+			[
+				"iconsinde",
+				"src/Icons/index.js"
+			],
+			[
+				"iconst",
+				"src/Icons/IconsTable.js"
+			],
+			[
+				"arch",
+				"src/Icons/Icons/Archive.js"
+			],
+			[
+				"att",
+				"src/Icons/Icons/Attachment.js"
+			],
+			[
+				"inbo",
+				"src/Icons/Icons/Inbox.js"
+			],
+			[
+				"icon",
+				"src/Icons/IconsTable.js"
+			],
+			[
+				"info",
+				"src/Icons/Icons/Info.js"
+			],
+			[
+				"varia",
+				"src/styles/common/_variables.scss"
+			],
+			[
+				"spac",
+				"src/styles/common/_spacing.scss"
+			],
+			[
+				"typo",
+				"src/Typography/_typography.scss"
+			],
+			[
+				"atomi",
+				"src/styles/common/_atomic-classes.scss"
+			],
+			[
+				"colo",
+				"src/styles/common/_colors.scss"
+			],
+			[
+				"depr",
+				"src/styles/common/_deprecated.scss"
+			],
+			[
+				"sketch",
+				"docs/Sketch/SketchExportedPage.js"
+			],
+			[
+				"swat",
+				"docs/utils/colorSwatches.js"
+			],
+			[
+				"lint",
+				".eslintrc.json"
+			],
+			[
+				"webpa",
+				"build/common/webpack.common.js"
+			],
+			[
+				"copy",
+				"docs/Components/Pages/Copy.js"
+			],
+			[
+				"dep",
+				"src/styles/common/_deprecated.scss"
+			],
+			[
+				"depre",
+				"src/styles/common/_deprecated.scss"
+			],
+			[
+				"sara",
+				"docs/Components/Contributors/People/SarahWhinnem.js"
+			],
+			[
+				"classna",
+				"docs/Components/APIDocumentation/ClassDocumentation.js"
+			],
+			[
+				"atomic",
+				"src/styles/common/_atomic-classes.scss"
+			],
+			[
+				"alert",
+				"src/Alert/Alert.docs.js"
+			],
+			[
+				"contrib",
+				"docs/Components/Pages/Contributing.js"
+			],
+			[
+				"button",
+				"src/Button/Button.docs.js"
+			],
+			[
+				"layout",
+				"src/Layout/_flex.scss"
+			],
+			[
+				"flex",
+				"src/Layout/Flex.docs.js"
+			],
+			[
+				"classnan",
+				"docs/Components/APIDocumentation/ClassDocumentation.js"
+			],
+			[
+				"favico",
+				"src/Logos/util/setFavicon.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 294.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

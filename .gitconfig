@@ -10,6 +10,8 @@
     quotepath = false
     whitespace = cr-at-eol
 	editor = subl -w
+    pager = less -FRSX
+    autocrlf = input
 
 [alias]
     push = "!git push || $(git push 2>&1 | tail -n2 | head -n1)"
@@ -46,6 +48,12 @@
 
 [push]
     default = simple
+
+[pull]
+    rebase = true
+
+[branch]
+    autosetuprebase = always
 
 [status]
     showUntrackedFiles = all
