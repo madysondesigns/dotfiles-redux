@@ -82,8 +82,11 @@ echo "Homebrew: installing utilities & packages..."
 brew install bash-completion
 brew install git
 brew install autojump
-brew cask install keepingyouawake
 brew cask install alfred
+brew cask install karabiner-elements
+brew cask install sublime-text
+brew cask install keepingyouawake
+brew cask install licecap
 
 
 ###############################################################################
@@ -91,3 +94,11 @@ brew cask install alfred
 ###############################################################################
 echo "Homebrew: cleaning up..."
 brew cleanup
+
+
+###############################################################################
+# Sublime setup: install Package Control
+###############################################################################
+echo "Sublime: installing Package Control..."
+echo "Follow instructions at https://packagecontrol.io/installation"
+# someday do this with curl
