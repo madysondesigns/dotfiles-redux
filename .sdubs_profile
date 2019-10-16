@@ -34,18 +34,18 @@ test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shel
 
 # do close spelling matches with cd
 shopt -s cdspell
-shopt -s histappend
 shopt -s nocaseglob
 shopt -s checkwinsize
 
 
 # improved history
+shopt -s histappend                                                             # append to history, don't overwrite it
 export HISTIGNORE="[   ]*:&:bg:fg:exit"
 export HISTCONTROL=ignoredups:erasedups                                         # no duplicate entries
 export HISTSIZE=100000                                                          # big big history
 export HISTFILESIZE=100000                                                      # big big history
-shopt -s histappend                                                             # append to history, don't overwrite it
-export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"     # Save and reload the history after each command finishes
+# export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"     # Save and reload the history after each command finishes
+PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r" # update of above for el cap +
 
 
 # color & prompt stuff
